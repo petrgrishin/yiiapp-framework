@@ -1,0 +1,14 @@
+{
+    "name": "petrgrishin/yiiapp-framework",
+    "description": "Yiiapp framework",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "yiisoft/yii": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Yiiapp\\Framework": "src/"
+        }
+    }
+}
