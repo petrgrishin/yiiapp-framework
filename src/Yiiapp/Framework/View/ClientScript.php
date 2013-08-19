@@ -5,6 +5,9 @@
 
 namespace Yiiapp\Framework\View;
 
+use CException;
+use Yii;
+
 class ClientScript extends \CClientScript {
     /**
      * @var View
