@@ -5,6 +5,7 @@
 
 namespace Yiiapp\Framework\Controllers;
 
+use \Yiiapp\Framework\Util\UrlBuilder;
 use CController;
 use CEvent;
 use CHttpRequest;
@@ -16,7 +17,7 @@ use Yii;
 /**
  * Class Base
  * @method  View        createView($dir, $data)
- * @method  \Yiiapp\Framework\Util\UrlBuilder  createUrlBuilder($route, $params = array())
+ * @method  UrlBuilder  createUrlBuilder($route, $params = array())
  * @method  void        assignViewDirWithName($name, $dir)
  * @method  string      getViewNameByDir($dir)
  * @method  string      getViewFolderPath($viewName, $basePath)
