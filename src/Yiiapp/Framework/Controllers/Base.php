@@ -46,8 +46,8 @@ class Base extends CController {
      */
     public function behaviors() {
         return array(
-            'render' => array('class' => '\Behavior\Controller\Render'),
-            'layoutChanger' => array('class' => '\Behavior\Controller\LayoutChanger'),
+            'render' => array('class' => '\Yiiapp\Framework\Behavior\Controller\Render'),
+            'layoutChanger' => array('class' => '\Yiiapp\Framework\Behavior\Controller\LayoutChanger'),
         );
     }
 
