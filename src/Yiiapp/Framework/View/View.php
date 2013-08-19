@@ -5,6 +5,7 @@
 
 namespace Yiiapp\Framework\View;
 
+use Yii;
 use Yiiapp\Framework\Util\HtmlTag;
 use Yiiapp\Framework\Util\Options;
 use CException;
