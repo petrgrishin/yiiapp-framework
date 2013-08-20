@@ -10,7 +10,7 @@ namespace Yiiapp\Framework\Behavior\Controller;
 use CException;
 use Yiiapp\Framework\Behavior\Behavior;
 use Yiiapp\Framework\Util\UrlBuilder;
-use View;
+use Yiiapp\Framework\View\View;
 use Yii;
 
 class Render extends Behavior {

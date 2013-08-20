@@ -6,8 +6,10 @@
 namespace Yiiapp\Framework\View;
 
 use Yii;
+use CWidget;
 use Yiiapp\Framework\Util\HtmlTag;
 use Yiiapp\Framework\Util\Options;
+use Exception;
 use CException;
 
 class View {
@@ -219,7 +221,7 @@ class View {
          * @param Widget $w
          * @return Widget
          */
-        $fRunnedObject = function (Widget $w) {
+        $fRunnedObject = function (CWidget $w) {
             return $w->getRunnedObject();
         };
         if (is_array($object)) {
@@ -281,7 +283,7 @@ class View {
      */
     public function getDataOptions() {
         if (!$this->dataOptions) {
-            $this->dataOptions = new Options($this->data);
+            $this->dataOptions = new \Options($this->data);
         }
         return $this->dataOptions;
     }
@@ -321,7 +323,7 @@ class View {
         $file = $this->getDir() . '/' . $viewName . '.php';
 
         if (!file_exists($file)) {
-            throw new \CException("View name `$viewName` not found in dir `" . $this->getDir() . "`");
+            throw new CException("View name `$viewName` not found in dir `" . $this->getDir() . "`");
         }
 
         if (is_array($data)) {
