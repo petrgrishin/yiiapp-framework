@@ -5,6 +5,7 @@
 
 namespace Yiiapp\Framework\View;
 
+use lessc;
 use Yii;
 
 class AssetManager extends \CAssetManager {
