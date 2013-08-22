@@ -18,7 +18,7 @@ class Options implements \Serializable, \ArrayAccess {
      * Получение значения по пути $path ('sub.sub.sub[x.y.x].ddd')
      * @param string $path
      * @param mixed $default
-     * @throws Exception Исключение при отсутствии значения по пути $path и отсутствии значения по умолчанию.
+     * @throws \Exception Исключение при отсутствии значения по пути $path и отсутствии значения по умолчанию.
      * @return mixed
      */
     public function get($path, $default = null) {

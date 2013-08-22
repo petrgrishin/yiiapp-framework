@@ -283,7 +283,7 @@ class View {
      */
     public function getDataOptions() {
         if (!$this->dataOptions) {
-            $this->dataOptions = new \Options($this->data);
+            $this->dataOptions = new Options($this->data);
         }
         return $this->dataOptions;
     }
