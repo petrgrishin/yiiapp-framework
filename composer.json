@@ -4,25 +4,8 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.0",
-        "yiisoft/yii": "dev-master",
-        "esaverelatedbehavior/esaverelatedbehavior": "1.5"
+        "yiisoft/yii": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "esaverelatedbehavior/esaverelatedbehavior",
-                "version": "1.5",
-                "dist": {
-                    "type": "zip",
-                    "url": "http://www.yiiframework.com/extension/esaverelatedbehavior/files/ESaveRelatedBehavior-v1.5.zip"
-                },
-                "autoload": {
-                    "classmap" : ["."]
-                }
-            }
-        }
-    ],
     "autoload": {
         "psr-0": {
             "Yiiapp\\Framework": "src/"
