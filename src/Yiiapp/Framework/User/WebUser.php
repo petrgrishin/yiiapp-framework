@@ -7,6 +7,7 @@ namespace Yiiapp\Framework\User;
 
 use CWebUser;
 use Yii;
+use Models\User;
 
 class WebUser extends CWebUser {
 

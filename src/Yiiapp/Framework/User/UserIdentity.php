@@ -7,6 +7,7 @@ namespace Yiiapp\Framework\User;
 
 use CException;
 use CUserIdentity;
+use Models\User;
 use Yii;
 
 class UserIdentity extends CUserIdentity {
