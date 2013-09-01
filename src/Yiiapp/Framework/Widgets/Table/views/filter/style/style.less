@@ -1,0 +1,127 @@
+@import "bootstrap/variables";
+
+@filterBorderColor: #ddd;
+@filterPaddingRight: 50px;
+
+.widgets-table-filter {
+  max-width:860px;
+
+  .preset{
+    padding-right:@filterPaddingRight;
+
+    .controls{
+      position: relative;
+      overflow: hidden;
+      padding-right:27px;
+
+      input, textarea, .uneditable-input {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0
+      }
+
+      .range-group{
+        display: inline-block;
+        width:47%;
+        margin-bottom:0px;
+
+        & + .range-group{
+          margin-left:6%;
+        }
+
+        input {
+          width:100%
+        }
+      }
+
+
+      label.checkbox{
+        display: inline-block;
+      }
+      .checkbox-group, .radio-group{
+        display: inline-block;
+
+        label.checkbox{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .presets-tabs-actions, .presets-tabs{
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    border-bottom: none;
+  }
+
+  .presets-tabs{
+    overflow: hidden;
+    height: 37px;
+    position: relative;
+
+    .nav-tabs{
+      width:9999999px;
+    }
+
+    &__background-helper {
+      position: absolute;
+      width: 40px;
+      height: 36px;
+      right: 0;
+      background: url("img/overflow.png") no-repeat right top;
+    }
+  }
+
+  .form-controls-group{
+    &.pull-left{
+      margin-left:@filterPaddingRight;
+    }
+    &.pull-right{
+      margin-right:@filterPaddingRight;
+    }
+  }
+
+  .fields-definition,
+  .field,
+  .tab-pane{
+    display:none;
+  }
+  .field-visible,
+  .tab-pane.active{
+    display:block;
+  }
+
+  .tab-box{
+    padding-top: @baseLineHeight;
+    border: 1px solid @filterBorderColor;
+    margin-top:-1px;
+    position: relative;
+  }
+
+  .searchable, .searchable:hover{
+      background-color: @successBackground !important;
+      border-color: #d6e9c6 !important;
+      border-bottom-color: transparent !important;
+  }
+
+  .tabbable{
+    .icon-chevron-down{
+      display:none
+    }
+
+    &.collapsed  {
+      .tab-box,
+      .icon-chevron-up{
+        display:none
+      }
+      .icon-chevron-down{
+        display: inline-block;
+      }
+
+      .presets-tabs__background-helper {
+        height: 37px;
+      }
+    }
+  }
+}

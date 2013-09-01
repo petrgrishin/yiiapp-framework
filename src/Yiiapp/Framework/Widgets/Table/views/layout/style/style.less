@@ -1,0 +1,82 @@
+@import "core/variables";
+@import "bootstrap/variables";
+
+.widgets-table-layout {
+  table {
+    width: 100%;
+    font-family: Arial;
+    font-size: 12px;
+
+    /* RESET */
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+
+      &:nth-child(2n+1) {
+        background-color: @tableBackgroundColor2;
+      }
+
+      th,
+      td {
+        padding: 8px 12px 8px 10px;
+        text-align: left;
+        position: relative;
+        line-height: 1em;
+        &.align-right {
+          text-align: right;
+        }
+      }
+      td {
+        border-bottom: 1px solid @tableBorderColor;
+      }
+
+      th {
+        color: @tableHeaderColor;
+        background-color: @tableBackgroundColor;
+        border-top: 1px solid @tableBorderColor;
+        border-bottom: 1px solid @tableBorderColor;
+      }
+
+      .sortable {
+        display:block
+      }
+
+    }
+
+  }
+
+  .pageSizes {
+    margin: 0 10px;
+
+    select{
+      width: auto;
+    }
+  }
+
+  .icon {
+    @color = "black";
+
+    &-asc, &-desc, &-unsorted{
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      margin-top:-6px;
+    }
+
+    &-asc {
+      background-position: 5px 6px;
+      background-image: url("img/@{color}-asc.gif");
+    }
+
+    &-desc {
+      background-position: 5px 6px;
+      background-image: url("img/@{color}-desc.gif");
+    }
+
+    &-unsorted {
+      background-position: 5px 3px;
+      background-image: url("img/@{color}-unsorted.gif");
+    }
+  }
+}
