@@ -2,7 +2,7 @@
 /** @var $this CBaseController */
 use Yiiapp\Framework\Util\DateTime;
 use Yiiapp\Framework\Util\HtmlTag;
-use CHtml;
+use Yii;
 
 /** @var $widget Filter */
 /** @var $view View */
