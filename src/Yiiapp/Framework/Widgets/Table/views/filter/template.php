@@ -2,7 +2,6 @@
 /** @var $this CBaseController */
 use Yiiapp\Framework\Util\DateTime;
 use Yiiapp\Framework\Util\HtmlTag;
-use Yii;
 
 /** @var $widget Filter */
 /** @var $view View */
@@ -100,7 +99,7 @@ $presetActions = array(
                                         break;
 
                                     case "daterange":
-                                        $this->createWidget('\Widgets\Bootstrap\Inputs\DateRangePicker', array(
+                                        $this->createWidget('\Yiiapp\Framework\Widgets\Bootstrap\Inputs\DateRangePicker', array(
                                             "name" => $fieldName,
                                             "options" => array(
                                                 'format' => 'yyyy-MM-dd',
@@ -306,7 +305,7 @@ $windowInputNameId = $view->getUniqString("windowInputNameId");
         </form>
     </div>
 <?
-$view->widget('\Widgets\Window\Constructor', 'window', array(
+$view->widget('\Yiiapp\Framework\Widgets\Window\Constructor', 'window', array(
     'title' => 'Название фильтра',
     'content' => ob_get_clean()
 ))->run();
