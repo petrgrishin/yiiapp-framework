@@ -3,6 +3,7 @@
 namespace Yiiapp\Framework\Widgets;
 
 use Yiiapp\Framework\View\View;
+use CException;
 
 /**
  * Widget
@@ -28,7 +29,7 @@ class Widget extends \CWidget {
     public function __construct($owner = null) {
         parent::__construct($owner);
 
-        $this->attachBehavior('render', '\Behavior\Controller\Render');
+        $this->attachBehavior('render', '\Yiiapp\Framework\Behavior\Controller\Render');
     }
 
     /**

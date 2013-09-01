@@ -1,6 +1,7 @@
 <?
 namespace Yiiapp\Framework\Widgets\Table;
 
+use CException;
 use CHtml;
 use Yiiapp\Framework\Model\WebListCriteria;
 use Yiiapp\Framework\Widgets\Widget;
@@ -76,14 +77,14 @@ class Filter extends Widget {
     /**
      * @param $name
      * @param $data
-     * @throws \CException
+     * @throws CException
      */
     public function setupField($name, $data) {
         if (!$data['label']) {
-            throw new \CException($name . ' `label` required in setup field');
+            throw new CException($name . ' `label` required in setup field');
         }
         if (!$data['type'] || !in_array($data['type'], static::$fTypes)) {
-            throw new \CException($name . ' `type` not support or not setup');
+            throw new CException($name . ' `type` not support or not setup');
         }
         $this->data['fields'][$name] = $data;
     }
