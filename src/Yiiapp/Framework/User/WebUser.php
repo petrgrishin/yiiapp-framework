@@ -5,7 +5,10 @@
 
 namespace Yiiapp\Framework\User;
 
-class WebUser extends \CWebUser {
+use CWebUser;
+use Yii;
+
+class WebUser extends CWebUser {
 
     public $defaultController;
     public $defaultControllerRole = array();
@@ -28,40 +31,6 @@ class WebUser extends \CWebUser {
             $this->model = User::model()->findByPk($this->id);
         }
         return $this->model;
-    }
-
-    /**
-     * @return CActiveRecord|null|SaleManagerProfile
-     */
-    public function getSaleManagerProfile() {
-        if ($this->roleProfile[User::ROLE_MANAGER] === null) {
-            $this->roleProfile[User::ROLE_MANAGER] = SaleManagerProfile::getByUser(Yii::app()->user->getModel());
-        }
-        return $this->roleProfile[User::ROLE_MANAGER];
-    }
-
-    /**
-     * @return CActiveRecord|null|ChiefProfile
-     */
-    public function getChiefProfile() {
-        if ($this->roleProfile[User::ROLE_CHIEF] === null) {
-            $this->roleProfile[User::ROLE_CHIEF] = ChiefProfile::getByUser(Yii::app()->user->getModel());
-        }
-        return $this->roleProfile[User::ROLE_CHIEF];
-    }
-
-    /**
-     * @return bool
-     */
-    public function isSaleManager() {
-        return Yii::app()->user->checkAccess(User::ROLE_MANAGER);
-    }
-
-    /**
-     * @return bool
-     */
-    public function isChief() {
-        return Yii::app()->user->checkAccess(User::ROLE_CHIEF);
     }
 
     /**
