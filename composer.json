@@ -4,26 +4,8 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.0",
-        "yiisoft/yii": "dev-master",
-        "yiiext/with-related-behavior": "0.65"
+        "yiisoft/yii": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "yiiext/with-related-behavior",
-                "version":"0.65",
-                "source": {
-                    "type": "git",
-                    "url": "http://github.com/yiiext/with-related-behavior",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "classmap" : ["."]
-                }
-            }
-        }
-    ],
     "autoload": {
         "psr-0": {
             "Yiiapp\\Framework": "src/"
