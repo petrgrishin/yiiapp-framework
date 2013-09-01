@@ -12,7 +12,6 @@
             "type": "package",
             "package": {
                 "name": "yiiext/with-related-behavior",
-                "version":"dev-master",
                 "source": {
                     "type": "git",
                     "url": "http://github.com/yiiext/with-related-behavior",
