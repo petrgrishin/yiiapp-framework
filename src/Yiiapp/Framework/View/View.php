@@ -11,6 +11,7 @@ use Yiiapp\Framework\Util\HtmlTag;
 use Yiiapp\Framework\Util\Options;
 use Exception;
 use CException;
+use Yiiapp\Framework\Widgets\Widget;
 
 class View {
     const PRIORITY_HIGH = 2;
@@ -239,7 +240,7 @@ class View {
     }
 
     public function createWidget($class, $params = null) {
-        if (!is_subclass_of($class, 'Widget')) {
+        if (!is_subclass_of($class, '\Yiiapp\Framework\Widgets\Widget')) {
             throw new Exception('Widget class need has parent class Widget, been ' . $class);
         }
         /** @var $widget Widget */
@@ -359,7 +360,7 @@ class View {
     /**
      * @param $tagName
      * @param array $htmlOptions
-     * @return \Util\HtmlTag
+     * @return HtmlTag
      */
     public function beginTag($tagName, $htmlOptions = array()) {
         return $this->tagsStack[] = $this->tag($tagName, $htmlOptions)->begin();
