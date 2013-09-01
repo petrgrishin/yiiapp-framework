@@ -59,9 +59,6 @@ class ActiveRecord extends CActiveRecord {
             'datetime' => array(
                 'class' => '\Yiiapp\Framework\Behavior\ActiveRecord\DateTime',
             ),
-            'esaverelatedbehavior' => array(
-                'class' => 'ESaveRelatedBehavior'
-            ),
             'withRelated' => array(
                 'class' => 'WithRelatedBehavior'
             )
