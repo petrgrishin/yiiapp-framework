@@ -3,16 +3,17 @@
  * @author: Smotrov Dmitriy <dsxack@gmail.com>
  */
 
-namespace Yiiapp\Framework\ActiveRecord;
+namespace Yiiapp\Framework\Model;
 
 use CActiveRecord;
+use CComponent;
 use CDbCriteria;
 use CException;
 use CPagination;
 use Yii;
 use Yiiapp\Framework\Util\DateTime;
 
-class WebListCriteria extends \CComponent {
+class WebListCriteria extends CComponent {
     const DEFAULT_PAGE_COUNT = 10;
 
     private $key;
@@ -20,9 +21,9 @@ class WebListCriteria extends \CComponent {
     private $usingPagination;
 
     /**
-     * @return CHttpSession
+     * @return \CHttpSession
      */
-    private function getSession() {
+    private function getSession(){
         return Yii::app()->session;
     }
 

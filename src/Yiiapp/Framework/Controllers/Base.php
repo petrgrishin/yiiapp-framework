@@ -7,7 +7,7 @@ namespace Yiiapp\Framework\Controllers;
 
 use \Yiiapp\Framework\Util\UrlBuilder;
 use Yiiapp\Framework\View\View;
-use Yiiapp\Framework\ActiveRecord\WebListCriteria;
+use Yiiapp\Framework\Model\WebListCriteria;
 use Yiiapp\Framework\User\WebUser;
 use CController;
 use CEvent;
