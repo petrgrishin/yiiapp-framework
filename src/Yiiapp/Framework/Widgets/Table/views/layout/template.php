@@ -85,7 +85,7 @@ $rowsContent = ob_get_clean();
     <div class="pageNavigation <?= $data["pagerCssClass"] ?>">
         <?
         /** @var $this Widget */
-        $this->widget('\Widgets\Table\Pager', array(
+        $this->widget('\Yiiapp\Framework\Widgets\Table\Pager', array(
             "pages" => $pager,
             'pagerPageSizesClass' => $data["pagerPageSizesClass"],
             "htmlOptions" => array(
